@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.6;
+
+}
+
+.header {
+  width: 80%;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.container-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #143E45;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
