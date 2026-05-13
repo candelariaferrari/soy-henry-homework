@@ -1,28 +1,21 @@
-/* TODO: Implementa un reset básico */
-* {
-  /* Remueve márgenes y padding predeterminados */
-  /* Configura box-sizing: border-box */
-}
+Homework CSS
 
-/* TODO: Configura el html */
-html {
-  /* font-size debe ser 100% para accesibilidad */
-}
+Galeria de fotos
+Practica de HTML, CSS, Git y GitHub creando una galería de fotos de perros, cada uno con su descripción. 
 
-/* TODO: Estilos base del body */
-body {
-  /* font-family con fuentes del sistema */
-  /* font-size en rem */
-  /* line-height apropiado */
-  /* color de texto */
-  /* background-color */
-}
-Desafíos adicionales (opcionales)
-Si terminas y quieres practicar más:
+Estructura de la pagina: 
+Html: 
+- Header (titulo y descripción)
+- Contenido (galeria de imagenes con tarjetas)
+- Footer ( Descripción de como fue realizado )
 
-Paleta completa con HSL: Crea 5 colores diferentes variando solo el Hue, manteniendo Saturation y Lightness constantes. Documenta el patrón.
-Modo oscuro con HSL: Crea variables adicionales para un tema oscuro y agrégalas con un comentario explicando cómo invertiste los valores de Lightness.
-Grid más complejo: Haz que la primera tarjeta ocupe 2 columnas usando grid-column: span 2.
-Animación de entrada: Agrega una animación CSS cuando las tarjetas aparecen en pantalla (investiga @keyframes).
-Más media queries: Agrega un breakpoint intermedio (600px) con un layout diferente.
-Variables de espaciado: Crea un sistema completo de espaciado (xs, sm, md, lg, xl) y úsalo consistentemente.
+Cómo usar: 
+- Clonar el proyecto github 
+- Abrir el archivo index.html con la extensión liveserver 
+
+Tecnologías: 
+- HTML5
+- CSS
+
+Extensiones en Visual Studio Code
+Live Server Ritwick Dey
