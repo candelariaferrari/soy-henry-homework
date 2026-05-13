@@ -1,0 +1,197 @@
+/* ==========================================================================
+   Reset y configuración base
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+/* ==========================================================================
+   Variables y utilidades
+   ========================================================================== */
+:root {
+  --color-primary: hsl(348.7, 84.1%, 62.9%);
+  --color-secondary: hsl(39.9, 89.2%, 52.7%);
+  --color-tertiary: hsl(186, 69.2%, 51.6%);
+
+  /* Variación clara del color primario */
+  --color-primary-light: hsl(348.7, 84.1%, 80%);
+  --color-secondary-light: hsl(39.9, 89.2%, 80%);
+  --color-tertiary-light: hsl(186, 69.2%, 80%);
+  /* Variación oscura del color primario */
+  --color-primary-obscure: hsl(348.7, 84.1%, 40%);
+  --color-secondary-obscure: hsl(39.9, 89.2%, 40%);
+  --color-tertiary-obscure: hsl(186, 69.2%, 40%);
+
+  /* Colores de texto y fondo */
+  --color-background: hsl(0, 0%, 96.1%);
+  --color-text: hsl(188.2, 52.4%, 16.5%);
+
+  /* Espaciado */
+  --espaciado-xs: 0.25rem;
+  --espaciado-sm: 0.5rem;
+  --espaciado-md: 1rem;
+  --espaciado-lg: 2rem;
+  --espaciado-xl: 4rem;
+
+  /* Borders */
+  --tarjetas: 10px;
+  --buttons: 5px;
+}
+
+/*   Estiliza el header usando Flexbox  */
+.header {
+  display: flex;
+  padding: var(--espaciado-sm);
+  margin-bottom: var(--espaciado-lg);
+  background: var(--color-secondary);
+  background: linear-gradient(183deg, rgba(46, 200, 217, 1) 0%, rgba(240, 81, 111, 1) 0%, rgba(242, 170, 27, 1) 87%);
+  /*  background-color: var(--color-secondary); */
+  box-shadow: 0px 3px 15px #22222259;
+}
+
+.header-contenido {
+  text-align: center;
+  max-width: 80%;
+  margin: auto;
+}
+
+.titulo-principal {
+  font-size: 3rem;
+  margin-bottom: 0rem;
+  color: var(--color-text)
+}
+
+.descripcion {
+  font-size: 1.5rem;
+  color: var(--color-secondary-light);
+  margin-top: 0rem;
+}
+
+/* Implementa Grid para la galería */
+.contenedor {
+  padding: 1rem;
+  max-width: 80%;
+  margin: 0 auto;
+
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/*  Estiliza las tarjetas */
+.foto-tarjeta {
+  border-radius: 5px;
+  background-color: var(--color-background);
+  border-radius: var(--tarjetas);
+  border: 1px solid var(--color-tertiary);
+  box-shadow: 0px 10px 20px #46464627;
+  overflow: hidden;
+  transition: transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.foto-tarjeta:nth-child(odd) { /* odd es impar y even es par  */
+  border-color: var(--color-primary);
+}
+
+.foto-tarjeta img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.foto-info {
+  padding: 1rem 1rem 1rem 1rem;
+  height: 100%;
+}
+
+.foto-titulo {
+  margin: 0rem;
+  font-size: 1.3rem;
+  color: var(--color-tertiary);
+  transition: background-color 0.3s ease;
+}
+
+.foto-descripcion {
+  font-size: 0.9rem;
+  margin: 0px;
+}
+
+/* Efecto hover */
+.foto-tarjeta:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0px 10px 15px #2323239a;
+  border-color: var(--color-text);
+}
+
+.foto-tarjeta:hover img {
+  transform: scale(1.08);
+}
+
+.foto-tarjeta:hover .foto-info {
+  background-color: var(--color-tertiary);
+}
+
+.foto-tarjeta:hover .foto-titulo {
+  color: var(--color-text);
+  transition: color 0.3s ease;
+}
+
+/*Estiliza el footer */
+.footer {
+  background-color: var(--color-secondary-obscure);
+  color: var(--color-secondary-light);
+  padding: var(--espaciado-md);
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Tablets - 2 columnas */
+@media (max-width: 768px) {
+  .galeria {
+    /* grid-template-columns: 2 columnas */
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .titulo-principal {
+    font-size: 2rem ;
+  }
+  .descripcion{
+    font-size: 1rem;
+  }
+}
+
+/*  Móviles - 1 columna */
+@media (max-width: 480px) {
+  .galeria {
+    grid-template-columns: repeat(1, 1fr)
+  }
+
+  .titulo-principal {
+    font-size: 1.5rem
+  }
+  .descripcion{
+    font-size: 0.9rem;
+  }
+  .contenedor {
+    padding: 0px;
+  }
+}
